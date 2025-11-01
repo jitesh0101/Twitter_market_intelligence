@@ -1,0 +1,666 @@
+2025-11-01 09:25:11 - twitter_intelligence - INFO - Logging system initialized
+2025-11-01 09:25:11 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 09:25:11 - twitter_intelligence - INFO - TWITTER MARKET INTELLIGENCE SYSTEM
+2025-11-01 09:25:11 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 09:25:11 - twitter_intelligence - INFO - 
+======================================================================
+2025-11-01 09:25:11 - twitter_intelligence - INFO - PHASE 4: VISUALIZATION
+2025-11-01 09:25:11 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 09:25:11 - twitter_intelligence - WARNING - No analysis data found. Run analysis first: python main.py --analyze
+2025-11-01 09:25:11 - twitter_intelligence - INFO - 
+[SUCCESS] PIPELINE COMPLETE
+2025-11-01 09:25:29 - twitter_intelligence - INFO - Logging system initialized
+2025-11-01 09:25:29 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 09:25:29 - twitter_intelligence - INFO - TWITTER MARKET INTELLIGENCE SYSTEM
+2025-11-01 09:25:29 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 09:25:29 - twitter_intelligence - WARNING - No action specified. Use --all or specify phases
+2025-11-01 09:25:44 - twitter_intelligence - INFO - Logging system initialized
+2025-11-01 09:25:44 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 09:25:44 - twitter_intelligence - INFO - TWITTER MARKET INTELLIGENCE SYSTEM
+2025-11-01 09:25:44 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 09:25:44 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 09:25:44 - twitter_intelligence - INFO - PHASE 1: WEB SCRAPING
+2025-11-01 09:25:44 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 09:25:44 - twitter_intelligence - INFO - TwitterScraper initialized
+2025-11-01 09:25:44 - twitter_intelligence - INFO - Initializing Selenium driver...
+2025-11-01 09:25:55 - twitter_intelligence - ERROR - Failed to initialize driver: you cannot reuse the ChromeOptions object
+2025-11-01 09:25:55 - twitter_intelligence - ERROR - Scraping error: you cannot reuse the ChromeOptions object
+Traceback (most recent call last):
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\src\scraper\anti_detection.py", line 66, in create_driver
+    self.driver = uc.Chrome(
+                  ^^^^^^^^^^
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\undetected_chromedriver\__init__.py", line 466, in __init__
+    super(Chrome, self).__init__(
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 45, in __init__
+    super().__init__(
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 56, in __init__
+    super().__init__(
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 208, in __init__
+    self.start_session(capabilities)
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\undetected_chromedriver\__init__.py", line 724, in start_session
+    super(selenium.webdriver.chrome.webdriver.WebDriver, self).start_session(
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 292, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: cannot connect to chrome at 127.0.0.1:54037
+from session not created: This version of ChromeDriver only supports Chrome version 142
+Current browser version is 141.0.7390.123
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x12558c3
+	0x1255904
+	0x106e76d
+	0x10ab20d
+	0x10aa159
+	0x10a008f
+	0x109feb6
+	0x10e8993
+	0x10e830a
+	0x10dc766
+	0x10adac0
+	0x10aede4
+	0x14d7974
+	0x14d2bea
+	0x127e5b4
+	0x126dd28
+	0x1274d8d
+	0x125ded8
+	0x125e09c
+	0x1247d1a
+	0x76705d49
+	0x77c2d6db
+	0x77c2d661
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\main.py", line 73, in run_scraping_pipeline
+    with scraper:
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\src\scraper\twitter_scraper.py", line 438, in __enter__
+    self.initialize_driver()
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\src\scraper\twitter_scraper.py", line 76, in initialize_driver
+    self.driver = self.stealth_driver.create_driver()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\src\scraper\anti_detection.py", line 77, in create_driver
+    self.driver = uc.Chrome(
+                  ^^^^^^^^^^
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\undetected_chromedriver\__init__.py", line 269, in __init__
+    raise RuntimeError("you cannot reuse the ChromeOptions object")
+RuntimeError: you cannot reuse the ChromeOptions object
+2025-11-01 09:27:20 - twitter_intelligence - INFO - Logging system initialized
+2025-11-01 09:27:20 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 09:27:20 - twitter_intelligence - INFO - TWITTER MARKET INTELLIGENCE SYSTEM
+2025-11-01 09:27:20 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 09:27:20 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 09:27:20 - twitter_intelligence - INFO - PHASE 1: WEB SCRAPING
+2025-11-01 09:27:20 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 09:27:20 - twitter_intelligence - INFO - TwitterScraper initialized
+2025-11-01 09:27:20 - twitter_intelligence - INFO - Initializing Selenium driver...
+2025-11-01 09:27:29 - twitter_intelligence - ERROR - Failed to initialize driver: you cannot reuse the ChromeOptions object
+2025-11-01 09:27:29 - twitter_intelligence - ERROR - Scraping error: you cannot reuse the ChromeOptions object
+Traceback (most recent call last):
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\src\scraper\anti_detection.py", line 66, in create_driver
+    self.driver = uc.Chrome(
+                  ^^^^^^^^^^
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\undetected_chromedriver\__init__.py", line 466, in __init__
+    super(Chrome, self).__init__(
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 45, in __init__
+    super().__init__(
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 56, in __init__
+    super().__init__(
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 208, in __init__
+    self.start_session(capabilities)
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\undetected_chromedriver\__init__.py", line 724, in start_session
+    super(selenium.webdriver.chrome.webdriver.WebDriver, self).start_session(
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 292, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: cannot connect to chrome at 127.0.0.1:58383
+from session not created: This version of ChromeDriver only supports Chrome version 142
+Current browser version is 141.0.7390.123
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xd458c3
+	0xd45904
+	0xb5e76d
+	0xb9b20d
+	0xb9a159
+	0xb9008f
+	0xb8feb6
+	0xbd8993
+	0xbd830a
+	0xbcc766
+	0xb9dac0
+	0xb9ede4
+	0xfc7974
+	0xfc2bea
+	0xd6e5b4
+	0xd5dd28
+	0xd64d8d
+	0xd4ded8
+	0xd4e09c
+	0xd37d1a
+	0x76705d49
+	0x77c2d6db
+	0x77c2d661
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\main.py", line 73, in run_scraping_pipeline
+    with scraper:
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\src\scraper\twitter_scraper.py", line 438, in __enter__
+    self.initialize_driver()
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\src\scraper\twitter_scraper.py", line 76, in initialize_driver
+    self.driver = self.stealth_driver.create_driver()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\src\scraper\anti_detection.py", line 77, in create_driver
+    self.driver = uc.Chrome(
+                  ^^^^^^^^^^
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\undetected_chromedriver\__init__.py", line 269, in __init__
+    raise RuntimeError("you cannot reuse the ChromeOptions object")
+RuntimeError: you cannot reuse the ChromeOptions object
+2025-11-01 09:27:37 - twitter_intelligence - INFO - Logging system initialized
+2025-11-01 09:27:37 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 09:27:37 - twitter_intelligence - INFO - TWITTER MARKET INTELLIGENCE SYSTEM
+2025-11-01 09:27:37 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 09:27:37 - twitter_intelligence - INFO - 
+======================================================================
+2025-11-01 09:27:37 - twitter_intelligence - INFO - PHASE 4: VISUALIZATION
+2025-11-01 09:27:37 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 09:27:37 - twitter_intelligence - WARNING - No analysis data found. Run analysis first: python main.py --analyze
+2025-11-01 09:27:37 - twitter_intelligence - INFO - 
+[SUCCESS] PIPELINE COMPLETE
+2025-11-01 09:30:54 - twitter_intelligence - INFO - Logging system initialized
+2025-11-01 09:30:54 - twitter_intelligence - INFO - ==================================================
+2025-11-01 09:30:54 - twitter_intelligence - INFO - Twitter Market Intelligence System - Part 1
+2025-11-01 09:30:54 - twitter_intelligence - INFO - ==================================================
+2025-11-01 09:30:54 - twitter_intelligence - INFO - Initializing components...
+2025-11-01 09:30:54 - twitter_intelligence - INFO - Target: 2000 tweets
+2025-11-01 09:30:54 - twitter_intelligence - INFO - Hashtags: #nifty50, #sensex, #intraday, #banknifty
+2025-11-01 09:30:54 - twitter_intelligence - INFO - Time window: 24 hours
+2025-11-01 09:30:54 - twitter_intelligence - INFO - 
+==================================================
+2025-11-01 09:30:54 - twitter_intelligence - INFO - STEP 1: Scraping Tweets
+2025-11-01 09:30:54 - twitter_intelligence - INFO - ==================================================
+2025-11-01 09:30:54 - twitter_intelligence - INFO - TwitterScraper initialized
+2025-11-01 09:30:54 - twitter_intelligence - INFO - Initializing Selenium driver...
+2025-11-01 09:31:04 - twitter_intelligence - ERROR - Failed to initialize driver: you cannot reuse the ChromeOptions object
+2025-11-01 09:31:04 - twitter_intelligence - ERROR - Error during scraping: you cannot reuse the ChromeOptions object
+Traceback (most recent call last):
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\src\scraper\anti_detection.py", line 66, in create_driver
+    self.driver = uc.Chrome(
+                  ^^^^^^^^^^
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\undetected_chromedriver\__init__.py", line 466, in __init__
+    super(Chrome, self).__init__(
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 45, in __init__
+    super().__init__(
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 56, in __init__
+    super().__init__(
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 208, in __init__
+    self.start_session(capabilities)
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\undetected_chromedriver\__init__.py", line 724, in start_session
+    super(selenium.webdriver.chrome.webdriver.WebDriver, self).start_session(
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 292, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: cannot connect to chrome at 127.0.0.1:60745
+from session not created: This version of ChromeDriver only supports Chrome version 142
+Current browser version is 141.0.7390.123
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10c58c3
+	0x10c5904
+	0xede76d
+	0xf1b20d
+	0xf1a159
+	0xf1008f
+	0xf0feb6
+	0xf58993
+	0xf5830a
+	0xf4c766
+	0xf1dac0
+	0xf1ede4
+	0x1347974
+	0x1342bea
+	0x10ee5b4
+	0x10ddd28
+	0x10e4d8d
+	0x10cded8
+	0x10ce09c
+	0x10b7d1a
+	0x76705d49
+	0x77c2d6db
+	0x77c2d661
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\example_usage.py", line 56, in main
+    with scraper:
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\src\scraper\twitter_scraper.py", line 438, in __enter__
+    self.initialize_driver()
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\src\scraper\twitter_scraper.py", line 76, in initialize_driver
+    self.driver = self.stealth_driver.create_driver()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\src\scraper\anti_detection.py", line 77, in create_driver
+    self.driver = uc.Chrome(
+                  ^^^^^^^^^^
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\undetected_chromedriver\__init__.py", line 269, in __init__
+    raise RuntimeError("you cannot reuse the ChromeOptions object")
+RuntimeError: you cannot reuse the ChromeOptions object
+2025-11-01 10:08:02 - twitter_intelligence - INFO - Logging system initialized
+2025-11-01 10:08:02 - twitter_intelligence - INFO - ==================================================
+2025-11-01 10:08:02 - twitter_intelligence - INFO - Twitter Market Intelligence System - Part 1
+2025-11-01 10:08:02 - twitter_intelligence - INFO - ==================================================
+2025-11-01 10:08:02 - twitter_intelligence - INFO - Initializing components...
+2025-11-01 10:08:02 - twitter_intelligence - INFO - Target: 2000 tweets
+2025-11-01 10:08:02 - twitter_intelligence - INFO - Hashtags: #nifty50, #sensex, #intraday, #banknifty
+2025-11-01 10:08:02 - twitter_intelligence - INFO - Time window: 24 hours
+2025-11-01 10:08:02 - twitter_intelligence - INFO - 
+==================================================
+2025-11-01 10:08:02 - twitter_intelligence - INFO - STEP 1: Scraping Tweets
+2025-11-01 10:08:02 - twitter_intelligence - INFO - ==================================================
+2025-11-01 10:08:02 - twitter_intelligence - INFO - TwitterScraper initialized
+2025-11-01 10:08:02 - twitter_intelligence - INFO - Initializing Selenium driver...
+2025-11-01 10:08:07 - twitter_intelligence - INFO - Driver initialized successfully
+2025-11-01 10:08:07 - twitter_intelligence - INFO - Starting scrape for 4 hashtags, target: 2000 tweets
+2025-11-01 10:08:07 - twitter_intelligence - INFO - Scraping hashtag: #nifty50
+2025-11-01 10:08:07 - twitter_intelligence - INFO - Navigating to: https://twitter.com/search?q=nifty50 -filter:retweets&src=typed_query&f=live
+2025-11-01 10:08:32 - twitter_intelligence - WARNING - No more content available
+2025-11-01 10:08:32 - twitter_intelligence - INFO - Collected 0 tweets for #nifty50
+2025-11-01 10:08:32 - twitter_intelligence - INFO - Checkpoint saved: data\raw\checkpoints\checkpoint_20251101_100832.json
+2025-11-01 10:08:32 - twitter_intelligence - INFO - Scraping hashtag: #sensex
+2025-11-01 10:08:32 - twitter_intelligence - INFO - Navigating to: https://twitter.com/search?q=sensex -filter:retweets&src=typed_query&f=live
+2025-11-01 10:08:52 - twitter_intelligence - WARNING - No more content available
+2025-11-01 10:08:52 - twitter_intelligence - INFO - Collected 0 tweets for #sensex
+2025-11-01 10:08:52 - twitter_intelligence - INFO - Checkpoint saved: data\raw\checkpoints\checkpoint_20251101_100852.json
+2025-11-01 10:08:52 - twitter_intelligence - INFO - Scraping hashtag: #intraday
+2025-11-01 10:08:52 - twitter_intelligence - INFO - Navigating to: https://twitter.com/search?q=intraday -filter:retweets&src=typed_query&f=live
+2025-11-01 10:09:12 - twitter_intelligence - WARNING - No more content available
+2025-11-01 10:09:12 - twitter_intelligence - INFO - Collected 0 tweets for #intraday
+2025-11-01 10:09:12 - twitter_intelligence - INFO - Checkpoint saved: data\raw\checkpoints\checkpoint_20251101_100912.json
+2025-11-01 10:09:12 - twitter_intelligence - INFO - Scraping hashtag: #banknifty
+2025-11-01 10:09:12 - twitter_intelligence - INFO - Navigating to: https://twitter.com/search?q=banknifty -filter:retweets&src=typed_query&f=live
+2025-11-01 10:09:28 - twitter_intelligence - INFO - Closing scraper...
+2025-11-01 10:09:44 - twitter_intelligence - INFO - Scraper closed
+2025-11-01 10:10:02 - twitter_intelligence - INFO - Logging system initialized
+2025-11-01 10:10:02 - twitter_intelligence - INFO - ==================================================
+2025-11-01 10:10:02 - twitter_intelligence - INFO - Twitter Market Intelligence System - Part 1
+2025-11-01 10:10:02 - twitter_intelligence - INFO - ==================================================
+2025-11-01 10:10:02 - twitter_intelligence - INFO - Initializing components...
+2025-11-01 10:10:02 - twitter_intelligence - INFO - Target: 2000 tweets
+2025-11-01 10:10:02 - twitter_intelligence - INFO - Hashtags: #nifty50, #sensex, #intraday, #banknifty
+2025-11-01 10:10:02 - twitter_intelligence - INFO - Time window: 24 hours
+2025-11-01 10:10:02 - twitter_intelligence - INFO - 
+==================================================
+2025-11-01 10:10:02 - twitter_intelligence - INFO - STEP 1: Scraping Tweets
+2025-11-01 10:10:02 - twitter_intelligence - INFO - ==================================================
+2025-11-01 10:10:02 - twitter_intelligence - INFO - TwitterScraper initialized
+2025-11-01 10:10:02 - twitter_intelligence - INFO - Initializing Selenium driver...
+2025-11-01 10:10:05 - twitter_intelligence - INFO - Driver initialized successfully
+2025-11-01 10:10:05 - twitter_intelligence - INFO - Starting scrape for 4 hashtags, target: 2000 tweets
+2025-11-01 10:10:05 - twitter_intelligence - INFO - Scraping hashtag: #nifty50
+2025-11-01 10:10:05 - twitter_intelligence - INFO - Navigating to: https://twitter.com/search?q=nifty50 -filter:retweets&src=typed_query&f=live
+2025-11-01 10:10:20 - twitter_intelligence - ERROR - Error during scraping: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=141.0.7390.123)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff712d8e8e5+80021]
+	GetHandleVerifier [0x0x7ff712d8e940+80112]
+	(No symbol) [0x0x7ff712b1060f]
+	(No symbol) [0x0x7ff712afc145]
+	(No symbol) [0x0x7ff712b2177a]
+	(No symbol) [0x0x7ff712b98b06]
+	(No symbol) [0x0x7ff712bb8fa2]
+	(No symbol) [0x0x7ff712b91003]
+	(No symbol) [0x0x7ff712b595d1]
+	(No symbol) [0x0x7ff712b5a3f3]
+	GetHandleVerifier [0x0x7ff71304dc7d+2960429]
+	GetHandleVerifier [0x0x7ff713047f3a+2936554]
+	GetHandleVerifier [0x0x7ff713068977+3070247]
+	GetHandleVerifier [0x0x7ff712da83ce+185214]
+	GetHandleVerifier [0x0x7ff712dafe1f+216527]
+	GetHandleVerifier [0x0x7ff712d97b24+117460]
+	GetHandleVerifier [0x0x7ff712d97cdf+117903]
+	GetHandleVerifier [0x0x7ff712d7dbb8+11112]
+	BaseThreadInitThunk [0x0x7ffbdbd4e8d7+23]
+	RtlUserThreadStart [0x0x7ffbdd5cc53c+44]
+Traceback (most recent call last):
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\src\scraper\twitter_scraper.py", line 676, in _scrape_single_hashtag
+    has_more = HumanBehavior.random_scroll(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\src\scraper\anti_detection.py", line 174, in random_scroll
+    return driver.execute_script("return document.body.scrollHeight") != last_height
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 407, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=141.0.7390.123)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff712d8e8e5+80021]
+	GetHandleVerifier [0x0x7ff712d8e940+80112]
+	(No symbol) [0x0x7ff712b1060f]
+	(No symbol) [0x0x7ff712afc145]
+	(No symbol) [0x0x7ff712b2177a]
+	(No symbol) [0x0x7ff712b98b06]
+	(No symbol) [0x0x7ff712bb8fa2]
+	(No symbol) [0x0x7ff712b91003]
+	(No symbol) [0x0x7ff712b595d1]
+	(No symbol) [0x0x7ff712b5a3f3]
+	GetHandleVerifier [0x0x7ff71304dc7d+2960429]
+	GetHandleVerifier [0x0x7ff713047f3a+2936554]
+	GetHandleVerifier [0x0x7ff713068977+3070247]
+	GetHandleVerifier [0x0x7ff712da83ce+185214]
+	GetHandleVerifier [0x0x7ff712dafe1f+216527]
+	GetHandleVerifier [0x0x7ff712d97b24+117460]
+	GetHandleVerifier [0x0x7ff712d97cdf+117903]
+	GetHandleVerifier [0x0x7ff712d7dbb8+11112]
+	BaseThreadInitThunk [0x0x7ffbdbd4e8d7+23]
+	RtlUserThreadStart [0x0x7ffbdd5cc53c+44]
+
+2025-11-01 10:10:20 - twitter_intelligence - INFO - Collected 0 tweets for #nifty50
+2025-11-01 10:10:20 - twitter_intelligence - INFO - Checkpoint saved: data\raw\checkpoints\checkpoint_20251101_101020.json
+2025-11-01 10:10:20 - twitter_intelligence - INFO - Scraping hashtag: #sensex
+2025-11-01 10:10:20 - twitter_intelligence - INFO - Navigating to: https://twitter.com/search?q=sensex -filter:retweets&src=typed_query&f=live
+2025-11-01 10:10:21 - twitter_intelligence - ERROR - Error during scraping: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x0x7ff712d8e8e5+80021]
+	GetHandleVerifier [0x0x7ff712d8e940+80112]
+	(No symbol) [0x0x7ff712b10425]
+	(No symbol) [0x0x7ff712b5864f]
+	(No symbol) [0x0x7ff712b910f2]
+	(No symbol) [0x0x7ff712b8b89f]
+	(No symbol) [0x0x7ff712b8a94a]
+	(No symbol) [0x0x7ff712ada765]
+	GetHandleVerifier [0x0x7ff71304dc7d+2960429]
+	GetHandleVerifier [0x0x7ff713047f3a+2936554]
+	GetHandleVerifier [0x0x7ff713068977+3070247]
+	GetHandleVerifier [0x0x7ff712da83ce+185214]
+	GetHandleVerifier [0x0x7ff712dafe1f+216527]
+	(No symbol) [0x0x7ff712ad970e]
+	GetHandleVerifier [0x0x7ff713186a68+4241944]
+	BaseThreadInitThunk [0x0x7ffbdbd4e8d7+23]
+	RtlUserThreadStart [0x0x7ffbdd5cc53c+44]
+Traceback (most recent call last):
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\src\scraper\twitter_scraper.py", line 651, in _scrape_single_hashtag
+    self.driver.get(search_url)
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 356, in get
+    self.execute(Command.GET, {"url": url})
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x0x7ff712d8e8e5+80021]
+	GetHandleVerifier [0x0x7ff712d8e940+80112]
+	(No symbol) [0x0x7ff712b10425]
+	(No symbol) [0x0x7ff712b5864f]
+	(No symbol) [0x0x7ff712b910f2]
+	(No symbol) [0x0x7ff712b8b89f]
+	(No symbol) [0x0x7ff712b8a94a]
+	(No symbol) [0x0x7ff712ada765]
+	GetHandleVerifier [0x0x7ff71304dc7d+2960429]
+	GetHandleVerifier [0x0x7ff713047f3a+2936554]
+	GetHandleVerifier [0x0x7ff713068977+3070247]
+	GetHandleVerifier [0x0x7ff712da83ce+185214]
+	GetHandleVerifier [0x0x7ff712dafe1f+216527]
+	(No symbol) [0x0x7ff712ad970e]
+	GetHandleVerifier [0x0x7ff713186a68+4241944]
+	BaseThreadInitThunk [0x0x7ffbdbd4e8d7+23]
+	RtlUserThreadStart [0x0x7ffbdd5cc53c+44]
+
+2025-11-01 10:10:21 - twitter_intelligence - INFO - Collected 0 tweets for #sensex
+2025-11-01 10:10:21 - twitter_intelligence - INFO - Checkpoint saved: data\raw\checkpoints\checkpoint_20251101_101021.json
+2025-11-01 10:10:21 - twitter_intelligence - INFO - Scraping hashtag: #intraday
+2025-11-01 10:10:21 - twitter_intelligence - INFO - Navigating to: https://twitter.com/search?q=intraday -filter:retweets&src=typed_query&f=live
+2025-11-01 10:10:21 - twitter_intelligence - ERROR - Error during scraping: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x0x7ff712d8e8e5+80021]
+	GetHandleVerifier [0x0x7ff712d8e940+80112]
+	(No symbol) [0x0x7ff712b10425]
+	(No symbol) [0x0x7ff712b5864f]
+	(No symbol) [0x0x7ff712b910f2]
+	(No symbol) [0x0x7ff712b8b89f]
+	(No symbol) [0x0x7ff712b8a94a]
+	(No symbol) [0x0x7ff712ada765]
+	GetHandleVerifier [0x0x7ff71304dc7d+2960429]
+	GetHandleVerifier [0x0x7ff713047f3a+2936554]
+	GetHandleVerifier [0x0x7ff713068977+3070247]
+	GetHandleVerifier [0x0x7ff712da83ce+185214]
+	GetHandleVerifier [0x0x7ff712dafe1f+216527]
+	(No symbol) [0x0x7ff712ad970e]
+	GetHandleVerifier [0x0x7ff713186a68+4241944]
+	BaseThreadInitThunk [0x0x7ffbdbd4e8d7+23]
+	RtlUserThreadStart [0x0x7ffbdd5cc53c+44]
+Traceback (most recent call last):
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\src\scraper\twitter_scraper.py", line 651, in _scrape_single_hashtag
+    self.driver.get(search_url)
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 356, in get
+    self.execute(Command.GET, {"url": url})
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x0x7ff712d8e8e5+80021]
+	GetHandleVerifier [0x0x7ff712d8e940+80112]
+	(No symbol) [0x0x7ff712b10425]
+	(No symbol) [0x0x7ff712b5864f]
+	(No symbol) [0x0x7ff712b910f2]
+	(No symbol) [0x0x7ff712b8b89f]
+	(No symbol) [0x0x7ff712b8a94a]
+	(No symbol) [0x0x7ff712ada765]
+	GetHandleVerifier [0x0x7ff71304dc7d+2960429]
+	GetHandleVerifier [0x0x7ff713047f3a+2936554]
+	GetHandleVerifier [0x0x7ff713068977+3070247]
+	GetHandleVerifier [0x0x7ff712da83ce+185214]
+	GetHandleVerifier [0x0x7ff712dafe1f+216527]
+	(No symbol) [0x0x7ff712ad970e]
+	GetHandleVerifier [0x0x7ff713186a68+4241944]
+	BaseThreadInitThunk [0x0x7ffbdbd4e8d7+23]
+	RtlUserThreadStart [0x0x7ffbdd5cc53c+44]
+
+2025-11-01 10:10:21 - twitter_intelligence - INFO - Collected 0 tweets for #intraday
+2025-11-01 10:10:21 - twitter_intelligence - INFO - Checkpoint saved: data\raw\checkpoints\checkpoint_20251101_101021.json
+2025-11-01 10:10:21 - twitter_intelligence - INFO - Scraping hashtag: #banknifty
+2025-11-01 10:10:21 - twitter_intelligence - INFO - Navigating to: https://twitter.com/search?q=banknifty -filter:retweets&src=typed_query&f=live
+2025-11-01 10:10:21 - twitter_intelligence - ERROR - Error during scraping: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x0x7ff712d8e8e5+80021]
+	GetHandleVerifier [0x0x7ff712d8e940+80112]
+	(No symbol) [0x0x7ff712b10425]
+	(No symbol) [0x0x7ff712b5864f]
+	(No symbol) [0x0x7ff712b910f2]
+	(No symbol) [0x0x7ff712b8b89f]
+	(No symbol) [0x0x7ff712b8a94a]
+	(No symbol) [0x0x7ff712ada765]
+	GetHandleVerifier [0x0x7ff71304dc7d+2960429]
+	GetHandleVerifier [0x0x7ff713047f3a+2936554]
+	GetHandleVerifier [0x0x7ff713068977+3070247]
+	GetHandleVerifier [0x0x7ff712da83ce+185214]
+	GetHandleVerifier [0x0x7ff712dafe1f+216527]
+	(No symbol) [0x0x7ff712ad970e]
+	GetHandleVerifier [0x0x7ff713186a68+4241944]
+	BaseThreadInitThunk [0x0x7ffbdbd4e8d7+23]
+	RtlUserThreadStart [0x0x7ffbdd5cc53c+44]
+Traceback (most recent call last):
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\src\scraper\twitter_scraper.py", line 651, in _scrape_single_hashtag
+    self.driver.get(search_url)
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 356, in get
+    self.execute(Command.GET, {"url": url})
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "D:\PROGRAMS\twitter-market-intelligence\twitter-market-intelligence\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x0x7ff712d8e8e5+80021]
+	GetHandleVerifier [0x0x7ff712d8e940+80112]
+	(No symbol) [0x0x7ff712b10425]
+	(No symbol) [0x0x7ff712b5864f]
+	(No symbol) [0x0x7ff712b910f2]
+	(No symbol) [0x0x7ff712b8b89f]
+	(No symbol) [0x0x7ff712b8a94a]
+	(No symbol) [0x0x7ff712ada765]
+	GetHandleVerifier [0x0x7ff71304dc7d+2960429]
+	GetHandleVerifier [0x0x7ff713047f3a+2936554]
+	GetHandleVerifier [0x0x7ff713068977+3070247]
+	GetHandleVerifier [0x0x7ff712da83ce+185214]
+	GetHandleVerifier [0x0x7ff712dafe1f+216527]
+	(No symbol) [0x0x7ff712ad970e]
+	GetHandleVerifier [0x0x7ff713186a68+4241944]
+	BaseThreadInitThunk [0x0x7ffbdbd4e8d7+23]
+	RtlUserThreadStart [0x0x7ffbdd5cc53c+44]
+
+2025-11-01 10:10:21 - twitter_intelligence - INFO - Collected 0 tweets for #banknifty
+2025-11-01 10:10:21 - twitter_intelligence - INFO - Checkpoint saved: data\raw\checkpoints\checkpoint_20251101_101021.json
+2025-11-01 10:10:21 - twitter_intelligence - INFO - Scraping complete. Total tweets collected: 0
+2025-11-01 10:10:21 - twitter_intelligence - INFO - Closing scraper...
+2025-11-01 10:10:23 - twitter_intelligence - INFO - Scraper closed
+2025-11-01 10:10:23 - twitter_intelligence - WARNING - No tweets collected. Exiting.
+2025-11-01 10:11:07 - twitter_intelligence - INFO - Logging system initialized
+2025-11-01 10:11:07 - twitter_intelligence - INFO - ==================================================
+2025-11-01 10:11:07 - twitter_intelligence - INFO - Twitter Market Intelligence System - Part 1
+2025-11-01 10:11:07 - twitter_intelligence - INFO - ==================================================
+2025-11-01 10:11:07 - twitter_intelligence - INFO - Initializing components...
+2025-11-01 10:11:07 - twitter_intelligence - INFO - Target: 2000 tweets
+2025-11-01 10:11:07 - twitter_intelligence - INFO - Hashtags: #nifty50, #sensex, #intraday, #banknifty
+2025-11-01 10:11:07 - twitter_intelligence - INFO - Time window: 24 hours
+2025-11-01 10:11:07 - twitter_intelligence - INFO - 
+==================================================
+2025-11-01 10:11:07 - twitter_intelligence - INFO - STEP 1: Scraping Tweets
+2025-11-01 10:11:07 - twitter_intelligence - INFO - ==================================================
+2025-11-01 10:11:07 - twitter_intelligence - INFO - TwitterScraper initialized
+2025-11-01 10:11:07 - twitter_intelligence - INFO - Initializing Selenium driver...
+2025-11-01 10:11:10 - twitter_intelligence - INFO - Driver initialized successfully
+2025-11-01 10:11:10 - twitter_intelligence - INFO - Starting scrape for 4 hashtags, target: 2000 tweets
+2025-11-01 10:11:10 - twitter_intelligence - INFO - Scraping hashtag: #nifty50
+2025-11-01 10:11:10 - twitter_intelligence - INFO - Navigating to: https://twitter.com/search?q=nifty50 -filter:retweets&src=typed_query&f=live
+2025-11-01 10:11:33 - twitter_intelligence - WARNING - No more content available
+2025-11-01 10:11:33 - twitter_intelligence - INFO - Collected 0 tweets for #nifty50
+2025-11-01 10:11:33 - twitter_intelligence - INFO - Checkpoint saved: data\raw\checkpoints\checkpoint_20251101_101133.json
+2025-11-01 10:11:33 - twitter_intelligence - INFO - Scraping hashtag: #sensex
+2025-11-01 10:11:33 - twitter_intelligence - INFO - Navigating to: https://twitter.com/search?q=sensex -filter:retweets&src=typed_query&f=live
+2025-11-01 10:11:38 - twitter_intelligence - INFO - Closing scraper...
+2025-11-01 10:11:55 - twitter_intelligence - INFO - Scraper closed
+2025-11-01 10:12:05 - twitter_intelligence - INFO - Logging system initialized
+2025-11-01 10:12:05 - twitter_intelligence - INFO - ==================================================
+2025-11-01 10:12:05 - twitter_intelligence - INFO - Twitter Market Intelligence System - Part 1
+2025-11-01 10:12:05 - twitter_intelligence - INFO - ==================================================
+2025-11-01 10:12:05 - twitter_intelligence - INFO - Initializing components...
+2025-11-01 10:12:05 - twitter_intelligence - INFO - Target: 2000 tweets
+2025-11-01 10:12:05 - twitter_intelligence - INFO - Hashtags: #nifty50, #sensex, #intraday, #banknifty
+2025-11-01 10:12:05 - twitter_intelligence - INFO - Time window: 24 hours
+2025-11-01 10:12:05 - twitter_intelligence - INFO - 
+==================================================
+2025-11-01 10:12:05 - twitter_intelligence - INFO - STEP 1: Scraping Tweets
+2025-11-01 10:12:05 - twitter_intelligence - INFO - ==================================================
+2025-11-01 10:12:05 - twitter_intelligence - INFO - TwitterScraper initialized
+2025-11-01 10:12:05 - twitter_intelligence - INFO - Initializing Selenium driver...
+2025-11-01 10:12:08 - twitter_intelligence - INFO - Driver initialized successfully
+2025-11-01 10:12:08 - twitter_intelligence - INFO - Starting scrape for 4 hashtags, target: 2000 tweets
+2025-11-01 10:12:08 - twitter_intelligence - INFO - Scraping hashtag: #nifty50
+2025-11-01 10:12:08 - twitter_intelligence - INFO - Navigating to: https://twitter.com/search?q=nifty50 -filter:retweets&src=typed_query&f=live
+2025-11-01 10:12:32 - twitter_intelligence - WARNING - No more content available
+2025-11-01 10:12:32 - twitter_intelligence - INFO - Collected 0 tweets for #nifty50
+2025-11-01 10:12:32 - twitter_intelligence - INFO - Checkpoint saved: data\raw\checkpoints\checkpoint_20251101_101232.json
+2025-11-01 10:12:32 - twitter_intelligence - INFO - Scraping hashtag: #sensex
+2025-11-01 10:12:32 - twitter_intelligence - INFO - Navigating to: https://twitter.com/search?q=sensex -filter:retweets&src=typed_query&f=live
+2025-11-01 10:12:52 - twitter_intelligence - WARNING - No more content available
+2025-11-01 10:12:52 - twitter_intelligence - INFO - Collected 0 tweets for #sensex
+2025-11-01 10:12:52 - twitter_intelligence - INFO - Checkpoint saved: data\raw\checkpoints\checkpoint_20251101_101252.json
+2025-11-01 10:12:52 - twitter_intelligence - INFO - Scraping hashtag: #intraday
+2025-11-01 10:12:52 - twitter_intelligence - INFO - Navigating to: https://twitter.com/search?q=intraday -filter:retweets&src=typed_query&f=live
+2025-11-01 10:13:02 - twitter_intelligence - INFO - Closing scraper...
+2025-11-01 10:13:22 - twitter_intelligence - INFO - Scraper closed
+2025-11-01 10:19:45 - twitter_intelligence - INFO - Logging system initialized
+2025-11-01 10:19:45 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 10:19:45 - twitter_intelligence - INFO - TWITTER MARKET INTELLIGENCE SYSTEM
+2025-11-01 10:19:45 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 10:19:45 - twitter_intelligence - INFO - 
+======================================================================
+2025-11-01 10:19:45 - twitter_intelligence - INFO - PHASE 4: VISUALIZATION
+2025-11-01 10:19:45 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 10:19:45 - twitter_intelligence - WARNING - No analysis data found. Run analysis first: python main.py --analyze
+2025-11-01 10:19:45 - twitter_intelligence - INFO - 
+[SUCCESS] PIPELINE COMPLETE
+2025-11-01 10:20:07 - twitter_intelligence - INFO - Logging system initialized
+2025-11-01 10:20:07 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 10:20:07 - twitter_intelligence - INFO - TWITTER MARKET INTELLIGENCE SYSTEM
+2025-11-01 10:20:07 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 10:20:07 - twitter_intelligence - INFO - 
+======================================================================
+2025-11-01 10:20:07 - twitter_intelligence - INFO - PHASE 3: NLP ANALYSIS & SIGNAL GENERATION
+2025-11-01 10:20:07 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 10:20:07 - twitter_intelligence - INFO - ParquetStorage initialized with compression: snappy
+2025-11-01 10:20:07 - twitter_intelligence - INFO - Loading data from data\processed\tweets_processed.parquet
+2025-11-01 10:20:08 - twitter_intelligence - INFO - Loaded 200 rows
+2025-11-01 10:20:08 - twitter_intelligence - INFO - TF-IDF initialized: max_features=1000, ngram_range=(1, 2)
+2025-11-01 10:20:08 - twitter_intelligence - INFO - TextProcessor initialized
+2025-11-01 10:20:08 - twitter_intelligence - INFO - Processing 200 tweets for feature extraction...
+2025-11-01 10:20:08 - twitter_intelligence - INFO - Feature extraction complete
+2025-11-01 10:20:08 - twitter_intelligence - INFO - SignalGenerator initialized with weights: {'sentiment': 0.3, 'engagement': 0.3, 'urgency': 0.2, 'technical_terms': 0.2}
+2025-11-01 10:20:08 - twitter_intelligence - INFO - Generating signals for 200 tweets...
+2025-11-01 10:20:08 - twitter_intelligence - INFO - Signal generation complete
+2025-11-01 10:20:08 - twitter_intelligence - INFO - Aggregating signals by hashtags...
+2025-11-01 10:20:08 - twitter_intelligence - INFO - Aggregated 6 groups
+2025-11-01 10:20:08 - twitter_intelligence - INFO - Generating trading report...
+2025-11-01 10:20:08 - twitter_intelligence - INFO - Aggregating signals by hashtags...
+2025-11-01 10:20:08 - twitter_intelligence - INFO - Aggregated 6 groups
+2025-11-01 10:20:08 - twitter_intelligence - INFO - Trading report generated
+2025-11-01 10:20:08 - twitter_intelligence - INFO - Saved 200 rows to data\analysis\signals_with_features.parquet (0.05 MB)
+2025-11-01 10:20:08 - twitter_intelligence - INFO - 
+======================================================================
+2025-11-01 10:20:08 - twitter_intelligence - INFO - ANALYSIS SUMMARY
+2025-11-01 10:20:08 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 10:20:08 - twitter_intelligence - INFO - Total Tweets: 200
+2025-11-01 10:20:08 - twitter_intelligence - INFO - Average Signal: -0.269
+2025-11-01 10:20:08 - twitter_intelligence - INFO - Market Sentiment: BEARISH
+2025-11-01 10:20:08 - twitter_intelligence - INFO - 
+Bullish: 51 (25.5%)
+2025-11-01 10:20:08 - twitter_intelligence - INFO - Bearish: 107 (53.5%)
+2025-11-01 10:20:08 - twitter_intelligence - INFO - 
+Top 5 Hashtags:
+2025-11-01 10:20:08 - twitter_intelligence - INFO -   1. #trading: -0.197 - HOLD
+2025-11-01 10:20:08 - twitter_intelligence - INFO -   2. #intraday: -0.259 - HOLD
+2025-11-01 10:20:08 - twitter_intelligence - INFO -   3. #stockmarket: -0.272 - HOLD
+2025-11-01 10:20:08 - twitter_intelligence - INFO -   4. #nifty50: -0.281 - HOLD
+2025-11-01 10:20:08 - twitter_intelligence - INFO -   5. #banknifty: -0.292 - HOLD
+2025-11-01 10:20:08 - twitter_intelligence - INFO - 
+[SUCCESS] PIPELINE COMPLETE
+2025-11-01 10:57:38 - twitter_intelligence - INFO - Logging system initialized
+2025-11-01 10:57:38 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 10:57:38 - twitter_intelligence - INFO - TWITTER ANALYSIS & SIGNAL GENERATION
+2025-11-01 10:57:38 - twitter_intelligence - INFO - ======================================================================
+2025-11-01 10:57:38 - twitter_intelligence - INFO - Loading data from data/processed/tweets_processed.parquet...
+2025-11-01 10:57:38 - twitter_intelligence - INFO - Loaded 200 tweets
+2025-11-01 10:57:38 - twitter_intelligence - INFO - 
+Extracting features...
+2025-11-01 10:57:38 - twitter_intelligence - INFO - TF-IDF initialized: max_features=1000, ngram_range=(1, 2)
+2025-11-01 10:57:38 - twitter_intelligence - INFO - TextProcessor initialized
+2025-11-01 10:57:38 - twitter_intelligence - INFO - Processing 200 tweets for feature extraction...
+2025-11-01 10:57:39 - twitter_intelligence - INFO - Feature extraction complete

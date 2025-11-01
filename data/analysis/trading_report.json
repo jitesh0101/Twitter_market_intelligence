@@ -1,0 +1,93 @@
+{
+  "summary": {
+    "total_tweets": 200,
+    "avg_signal": -0.2690335666182479,
+    "signal_std": 0.5247247452253224,
+    "market_sentiment": "BEARISH"
+  },
+  "distribution": {
+    "bullish": 51,
+    "bearish": 107,
+    "neutral": 42,
+    "bullish_pct": 25.5,
+    "bearish_pct": 53.5
+  },
+  "strong_signals": {
+    "strong_bullish_count": 0,
+    "strong_bearish_count": 56
+  },
+  "top_hashtags": {
+    "#trading": {
+      "composite_signal_mean": -0.19662956123788947,
+      "composite_signal_std": 0.5091940815461143,
+      "composite_signal_count": 117,
+      "sentiment_signal_mean": 0.27438228438228435,
+      "engagement_score_mean": 0.5711211534406064,
+      "urgency_signal_mean": 0.05897435897435898,
+      "signal_strength_mean": 0.4442126078130196,
+      "confidence_width_mean": 0.6081036311435105,
+      "aggregate_confidence": 0.6959481844282447,
+      "recommendation": "HOLD"
+    },
+    "#intraday": {
+      "composite_signal_mean": -0.25902514086234996,
+      "composite_signal_std": 0.504716091346538,
+      "composite_signal_count": 106,
+      "sentiment_signal_mean": 0.20677339432056413,
+      "engagement_score_mean": 0.5659205532987898,
+      "urgency_signal_mean": 0.06037735849056604,
+      "signal_strength_mean": 0.46954681640762186,
+      "confidence_width_mean": 0.6190933791873737,
+      "aggregate_confidence": 0.6904533104063131,
+      "recommendation": "HOLD"
+    },
+    "#stockmarket": {
+      "composite_signal_mean": -0.27206882760593015,
+      "composite_signal_std": 0.5336047638405336,
+      "composite_signal_count": 102,
+      "sentiment_signal_mean": 0.18635274311744898,
+      "engagement_score_mean": 0.5817678383236478,
+      "urgency_signal_mean": 0.05490196078431373,
+      "signal_strength_mean": 0.49657503231222117,
+      "confidence_width_mean": 0.5833646325722873,
+      "aggregate_confidence": 0.7083176837138563,
+      "recommendation": "HOLD"
+    },
+    "#nifty50": {
+      "composite_signal_mean": -0.2807378473111301,
+      "composite_signal_std": 0.5330195503266522,
+      "composite_signal_count": 96,
+      "sentiment_signal_mean": 0.18081228956228956,
+      "engagement_score_mean": 0.5804579649191602,
+      "urgency_signal_mean": 0.053125000000000006,
+      "signal_strength_mean": 0.5049848225391516,
+      "confidence_width_mean": 0.60044501058605,
+      "aggregate_confidence": 0.699777494706975,
+      "recommendation": "HOLD"
+    },
+    "#banknifty": {
+      "composite_signal_mean": -0.2920678696955511,
+      "composite_signal_std": 0.5467075498381735,
+      "composite_signal_count": 89,
+      "sentiment_signal_mean": 0.16766655317217116,
+      "engagement_score_mean": 0.5717708924663297,
+      "urgency_signal_mean": 0.06404494382022471,
+      "signal_strength_mean": 0.5142653022132696,
+      "confidence_width_mean": 0.5530951486020662,
+      "aggregate_confidence": 0.723452425698967,
+      "recommendation": "HOLD"
+    },
+    "#sensex": {
+      "composite_signal_mean": -0.32348903432443654,
+      "composite_signal_std": 0.518798470022305,
+      "composite_signal_count": 96,
+      "sentiment_signal_mean": 0.13266308922558923,
+      "engagement_score_mean": 0.5712440757892387,
+      "urgency_signal_mean": 0.04791666666666667,
+      "signal_strength_mean": 0.5016424917631507,
+      "confidence_width_mean": 0.566879904923579,
+      "aggregate_confidence": 0.7165600475382106,
+      "recommendation": "SELL"
+    }
+  }
+}

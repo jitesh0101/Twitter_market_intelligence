@@ -1,0 +1,47 @@
+# Core Dependencies
+selenium==4.15.2
+undetected-chromedriver==3.5.4
+webdriver-manager==4.0.1
+
+# Data Processing
+pandas==2.1.3
+numpy==1.26.2
+pyarrow==14.0.1
+fastparquet==2023.10.1
+
+# Web Scraping Utilities
+beautifulsoup4==4.12.2
+lxml==4.9.3
+fake-useragent==1.4.0
+
+# Retry & Error Handling
+tenacity==8.2.3
+requests==2.31.0
+
+# Configuration & Environment
+python-dotenv==1.0.0
+pyyaml==6.0.1
+
+# Text Processing & NLP (for Part 2, but including now)
+nltk==3.8.1
+scikit-learn==1.3.2
+textblob==0.17.1
+
+# Visualization (for Part 2)
+plotly==5.18.0
+matplotlib==3.8.2
+seaborn==0.13.0
+
+# Logging & Monitoring
+colorlog==6.8.0
+tqdm==4.66.1
+
+# Development Tools
+pytest==7.4.3
+pytest-cov==4.1.0
+black==23.12.1
+flake8==6.1.0
+mypy==1.7.1
+
+# Optional Performance
+psutil==5.9.6

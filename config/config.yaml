@@ -1,0 +1,99 @@
+# Twitter Market Intelligence Configuration
+
+scraper:
+  target_tweets: 2000
+  time_window_hours: 24
+  hashtags:
+    - "#nifty50"
+    - "#sensex"
+    - "#intraday"
+    - "#banknifty"
+    - "#stockmarket"
+    - "#nse"
+    - "#bse"
+  
+  # Anti-detection settings
+  stealth:
+    min_delay: 2
+    max_delay: 5
+    scroll_pause: 1.5
+    page_load_timeout: 30
+    implicit_wait: 10
+  
+  # Browser settings
+  browser:
+    headless: false
+    window_size: "1920,1080"
+    user_agent_rotation: true
+  
+  # Retry settings
+  retry:
+    max_attempts: 3
+    exponential_backoff: true
+    base_delay: 5
+
+processor:
+  deduplication:
+    method: "content_hash"
+    similarity_threshold: 0.95
+  
+  cleaning:
+    remove_urls: true
+    remove_mentions: false
+    remove_hashtags: false
+    normalize_unicode: true
+    remove_emojis: false
+
+storage:
+  format: "parquet"
+  compression: "snappy"
+  batch_size: 500
+  raw_data_path: "data/raw"
+  processed_data_path: "data/processed"
+  analysis_data_path: "data/analysis"
+
+analyzer:
+  sentiment:
+    model: "vader"
+  
+  features:
+    use_tfidf: true
+    max_features: 1000
+    ngram_range: [1, 2]
+    use_embeddings: false
+  
+  signals:
+    sentiment_weight: 0.4
+    engagement_weight: 0.3
+    urgency_weight: 0.2
+    mention_weight: 0.1
+    
+    bullish_keywords:
+      - "buy"
+      - "bullish"
+      - "long"
+      - "support"
+      - "breakout"
+      - "rally"
+      - "uptrend"
+    
+    bearish_keywords:
+      - "sell"
+      - "bearish"
+      - "short"
+      - "resistance"
+      - "breakdown"
+      - "fall"
+      - "downtrend"
+
+visualization:
+  max_points: 10000
+  sampling_strategy: "uniform"
+  figure_dpi: 100
+  save_format: "html"
+
+logging:
+  level: "INFO"
+  log_file: "logs/scraper.log"
+  max_bytes: 10485760
+  backup_count: 5

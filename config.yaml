@@ -1,0 +1,111 @@
+# Twitter Market Intelligence System Configuration
+
+scraper:
+  # Target configuration
+  hashtags:
+    - "#nifty50"
+    - "#sensex"
+    - "#intraday"
+    - "#banknifty"
+  target_tweets: 2000
+  time_window_hours: 24
+  
+  # Browser configuration
+  browser:
+    headless: true
+    window_size: "1920,1080"
+    user_agent_rotation: true
+    
+  # Anti-detection settings
+  anti_detection:
+    random_delays:
+      min: 2
+      max: 5
+    scroll_pause:
+      min: 1
+      max: 3
+    max_retries: 3
+    backoff_factor: 2
+    
+  # Rate limiting
+  rate_limit:
+    requests_per_minute: 30
+    cool_down_on_error: 60
+    max_continuous_scrolls: 50
+    
+  # Checkpoint settings
+  checkpoint:
+    enabled: true
+    interval_tweets: 100
+    save_path: "data/raw/checkpoints"
+
+processor:
+  # Data cleaning
+  cleaning:
+    remove_duplicates: true
+    remove_retweets: true
+    min_content_length: 10
+    handle_unicode: true
+    
+  # Deduplication strategy
+  deduplication:
+    method: "content_hash"  # Options: content_hash, fuzzy, tweet_id
+    similarity_threshold: 0.95
+    
+  # Text normalization
+  normalization:
+    lowercase: false
+    remove_urls: true
+    remove_mentions: false
+    remove_hashtags: false
+    handle_emojis: "keep"  # Options: keep, remove, replace
+
+storage:
+  # Parquet configuration
+  parquet:
+    compression: "snappy"  # Options: snappy, gzip, brotli
+    engine: "pyarrow"
+    
+  # File paths
+  paths:
+    raw_data: "data/raw/tweets_raw.parquet"
+    processed_data: "data/processed/tweets_processed.parquet"
+    analysis_output: "data/analysis/signals.parquet"
+    
+  # Batch settings
+  batch:
+    size: 500
+    flush_interval: 300  # seconds
+
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/app.log"
+  max_bytes: 10485760  # 10MB
+  backup_count: 5
+  console_output: true
+
+analysis:
+  # Signal generation (Part 2)
+  sentiment:
+    method: "textblob"  # Options: textblob, vader, custom
+  
+  text_features:
+    use_tfidf: true
+    max_features: 1000
+    ngram_range: [1, 2]
+  
+  signal_weights:
+    sentiment: 0.3
+    engagement: 0.3
+    urgency: 0.2
+    technical_terms: 0.2
+
+performance:
+  # Concurrency
+  max_workers: 4
+  chunk_size: 1000
+  
+  # Memory management
+  memory_limit_mb: 2048
+  use_chunked_processing: true
